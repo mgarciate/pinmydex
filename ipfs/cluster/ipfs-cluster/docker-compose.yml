@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  ipfs-trusted-peer1:
+    build:
+      context: .
+      dockerfile: Dockerfile.peer1
+    networks:
+      ipfs_trusted_network:
+        aliases:
+          - peer1
+
+  ipfs-trusted-peer2:
+    build:
+      context: .
+      dockerfile: Dockerfile.peer2
+    networks:
+      ipfs_trusted_network:
+        aliases:
+          - peer2
+
+  ipfs-trusted-peer3:
+    build:
+      context: .
+      dockerfile: Dockerfile.peer3
+    networks:
+      ipfs_trusted_network:
+        aliases:
+          - peer3
+
+  networks:
+
+networks:
+  ipfs_trusted_network:
+    name: ipfs_trusted_network
+    external: true
+
+volumes:

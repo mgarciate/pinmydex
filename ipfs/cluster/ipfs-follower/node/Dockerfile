@@ -1,0 +1,1 @@
+FROM ipfs/ipfs-go:latest

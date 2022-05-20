@@ -1,0 +1,3 @@
+FROM ipfs/ipfs-cluster
+
+COPY ./config/* /data/ipfs-cluster
